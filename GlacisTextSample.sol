@@ -37,7 +37,7 @@ contract GlacisClientTextSample is GlacisClientOwnable {
         uint256 chainId,
         string memory message,
         uint8[] memory gmps,
-        uint256[] memory fees,
+        uint256[] memory fees
     ) external payable returns (bytes32) {
         return
             _route(
