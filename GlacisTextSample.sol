@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: Apache-2.0
 pragma solidity 0.8.18;
 
-import {GlacisClientOwnable} from "./GlacisClientContracts/GlacisClientOwnable.sol";
+import {GlacisClientOwnable} from "https://github.com/jboetticher/glacis-alpha-quickstart-remix-template/blob/main/GlacisClientContracts/GlacisClientOwnable.sol";
 
 /*
  _______  _        _______  _______ _________ _______ 
