@@ -19,3 +19,19 @@ contract XERC20Sample is XERC20 {
         _mint(owner_, 10 ** 18);
     }
 }
+
+
+
+interface IGlacisTokenMediator {
+    function route(
+        uint256 chainId,
+        address to,
+        bytes memory payload,
+        uint8[] memory gmps,
+        uint256[] memory fees,
+        address refundAddress,
+        bool retry,
+        address token,
+        uint256 tokenAmount
+    ) external payable returns (bytes32);
+}
