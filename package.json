@@ -1,0 +1,14 @@
+{
+  "name": "glacis-alpha-quickstart-remix-template",
+  "version": "1.0.0",
+  "description": "A quickstart template for building applications using Glacis and Remix.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jboetticher/glacis-alpha-quickstart-remix-template.git"
+  },
+  "keywords": ["remix", "glacis", "template", "quickstart"],
+  "author": "",
+  "license": "MIT",
+
+}
