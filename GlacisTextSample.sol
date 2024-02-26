@@ -16,8 +16,8 @@ import {GlacisClientOwnable} from "https://github.com/jboetticher/glacis-alpha-q
 
 /*
 
-GlacisRouter on Moonbase Alpha: 0xA87Ee3f55D6066EA5E1e168A4f6E21286beBb570
-GlacisRouter on Fantom TestNet: 0x4A1851A5345821f21e6BfBb07836d6F056Ce8150
+GlacisRouter on Moonbase Alpha: 0x71917f371210cDA0540bC6770C349AdcedF7FB36
+GlacisRouter on Fantom TestNet: 0xe537e0F3e2b0AC8e9C73E940FDDc1Fd53E1F6EB3
 
 Moonbase Alpha ChainID: 1287
 Fantom TestNet ChainID: 4002
