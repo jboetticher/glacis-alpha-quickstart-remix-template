@@ -3,15 +3,16 @@
 pragma solidity 0.8.18;
 
 import {GlacisCommons} from "./GlacisCommons.sol";
+import {IGlacisAccessControlClient} from "./IGlacisAccessControlClient.sol";
 error GlacisAccessControlClient__RouteAlreadyAdded();
 
 /// @title Glacis Access Control Client
 /// @dev This contract encapsulates Glacis Access Control client logic, contracts inheriting this will have access to
 /// Glacis Access control freatures
-abstract contract GlacisAccessControlClient {
+abstract contract GlacisAccessControlClient is IGlacisAccessControlClient {
     GlacisCommons.GlacisRoute[] private allowedRoutes;
 
-    /// @notice Add an allowed route for this client
+    /// @notice Adds an allowed route for this client
     /// @param allowedRoute Route to be added
     function _addAllowedRoute(
         GlacisCommons.GlacisRoute memory allowedRoute
@@ -28,7 +29,7 @@ abstract contract GlacisAccessControlClient {
     }
 
     /// @notice Get all allowed routes for this client
-    /// @return allowed routes array
+    /// @return Complete allowed routes array
     function getAllowedRoutes()
         external
         view
@@ -67,11 +68,10 @@ abstract contract GlacisAccessControlClient {
     /// @return True if route is allowed, false otherwise
     function isAllowedRoute(
         uint256 fromChainId,
-        address fromAddress,
-        uint8 fromGmpId,
+        bytes32 fromAddress,
+        uint160 fromGmpId,
         bytes memory // payload
-    ) public view returns (bool) {
-        // TODO:  Explore optimization using a bloom filter
+    ) public view override returns (bool) {
         for (uint256 i = 0; i < allowedRoutes.length; i++) {
             GlacisCommons.GlacisRoute memory allowedRoute = allowedRoutes[i];
             if (
@@ -80,7 +80,7 @@ abstract contract GlacisAccessControlClient {
                 (allowedRoute.fromChainId == fromChainId ||
                     allowedRoute.fromChainId == 0) &&
                 (allowedRoute.fromAddress == fromAddress ||
-                    allowedRoute.fromAddress == address(0))
+                    allowedRoute.fromAddress == bytes32(0))
             ) {
                 return true;
             }
