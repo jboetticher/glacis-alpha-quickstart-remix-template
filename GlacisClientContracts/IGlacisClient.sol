@@ -2,6 +2,7 @@
 pragma solidity 0.8.18;
 
 import {GlacisCommons} from "./GlacisCommons.sol";
+import {IGlacisAccessControlClient} from "./IGlacisAccessControlClient.sol";
 
 abstract contract IGlacisClient is IGlacisAccessControlClient {
     uint256 private immutable DEFAULT_QUORUM;
