@@ -33,18 +33,18 @@ contract GlacisClientTextSample is GlacisClientOwnable {
     ) GlacisClientOwnable(glacisRouter_, 1, owner_) {}
 
     function sendMessage(
-        address to,
+        bytes32 to,
         uint256 chainId,
         string memory message,
-        uint8[] memory gmps,
-        uint256[] memory fees
+        address[] memory adapters,
+        GlacisCommons.CrossChainGas[] memory fees
     ) external payable returns (bytes32) {
         return
             _route(
                 chainId,
                 to,
                 abi.encode(message),
-                gmps,
+                adapters,
                 fees,
                 msg.sender,
                 false,
@@ -53,9 +53,9 @@ contract GlacisClientTextSample is GlacisClientOwnable {
     }
 
     function _receiveMessage(
-        uint8[] calldata, // fromGmpId,
+        address[] calldata, // fromAdapters,
         uint256, // fromChainId,
-        address, // fromAddress,
+        bytes32, // fromAddress,
         bytes memory payload
     ) internal override {
         (currentMessage) = abi.decode(payload, (string));
