@@ -23,14 +23,13 @@ contract XERC20Sample is XERC20 {
 
 
 interface IGlacisTokenMediator {
-    function route(
+function route(
         uint256 chainId,
-        address to,
+        bytes32 to,
         bytes memory payload,
-        uint8[] memory gmps,
-        uint256[] memory fees,
+        address[] memory adapters,
+        GlacisCommons.CrossChainGas[] memory fees,
         address refundAddress,
-        bool retry,
         address token,
         uint256 tokenAmount
     ) external payable returns (bytes32);
