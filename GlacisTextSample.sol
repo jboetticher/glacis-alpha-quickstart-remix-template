@@ -33,7 +33,7 @@ contract GlacisClientTextSample is GlacisClientOwnable {
     ) GlacisClientOwnable(glacisRouter_, 1, owner_) {}
 
     function sendMessage(
-        bytes32 to,
+        address to,
         uint256 chainId,
         string memory message,
         address[] memory adapters,
@@ -42,7 +42,7 @@ contract GlacisClientTextSample is GlacisClientOwnable {
         return
             _route(
                 chainId,
-                to,
+                bytes32(uint256(uint160(to))),
                 abi.encode(message),
                 adapters,
                 fees,
