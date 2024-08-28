@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: Apache-2.0
 pragma solidity 0.8.18;
 
+import {GlacisCommons} from "./GlacisCommons.sol";
+
 /// @title IGlacisAccessControlClient
 /// @notice An interface that determines Glacis' required access control
 interface IGlacisAccessControlClient {
