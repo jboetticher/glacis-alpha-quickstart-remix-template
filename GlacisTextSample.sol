@@ -37,8 +37,8 @@ contract GlacisClientTextSample is GlacisClientOwnable {
         uint256 chainId,
         string memory message,
         address[] memory adapters,
-        GlacisCommons.CrossChainGas[] memory fees
-    ) external payable returns (bytes32) {
+        CrossChainGas[] memory fees
+    ) external payable returns (bytes32, uint256) {
         return
             _route(
                 chainId,
@@ -53,7 +53,7 @@ contract GlacisClientTextSample is GlacisClientOwnable {
     }
 
     function _receiveMessage(
-        address[] calldata, // fromAdapters,
+        address[] memory, // fromAdapters,
         uint256, // fromChainId,
         bytes32, // fromAddress,
         bytes memory payload

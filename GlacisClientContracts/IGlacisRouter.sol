@@ -2,6 +2,8 @@
 
 pragma solidity 0.8.18;
 
+import {GlacisCommons} from "./GlacisCommons.sol";
+
 /// @title IGlacisRouterEvents
 /// @notice An interface that defines a GlacisRouter's events
 abstract contract IGlacisRouterEvents is GlacisCommons
