@@ -16,11 +16,11 @@ import {GlacisClientOwnable} from "https://github.com/jboetticher/glacis-alpha-q
 
 /*
 
-GlacisRouter on Moonbase Alpha: 0x71917f371210cDA0540bC6770C349AdcedF7FB36
-GlacisRouter on Fantom TestNet: 0xe537e0F3e2b0AC8e9C73E940FDDc1Fd53E1F6EB3
+GlacisRouter on BSC    Testnet: 0x7B46E11429F51fb1E4324273fa26CF92c63Df18d
+GlacisRouter on Avalanche Fuji: 0x1Ce678F0e7834713868877C34F84C2cfaf511aFe
 
-Moonbase Alpha ChainID: 1287
-Fantom TestNet ChainID: 4002
+BSC   Testnet  ChainID: 97
+Avalanche Fuji ChainID: 43113
 
 */
 
