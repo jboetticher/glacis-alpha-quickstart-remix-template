@@ -16,11 +16,11 @@ import {GlacisClientOwnable} from "https://github.com/jboetticher/glacis-alpha-q
 
 /*
 
-GlacisRouter on Avalanche Fuji: 0x1Ce678F0e7834713868877C34F84C2cfaf511aFe
-GlacisRouter on BSC    Testnet: 0x7B46E11429F51fb1E4324273fa26CF92c63Df18d
+GlacisRouter on Avalanche Fuji:   0x1Ce678F0e7834713868877C34F84C2cfaf511aFe
+GlacisRouter on Arbitrum Sepolia: 0x51f4510b1488d03A4c8C699fEa3c0B745a042e45
 
-Avalanche Fuji ChainID: 43113
-BSC   Testnet  ChainID: 97
+Avalanche  Fuji  ChainID: 43113
+Arbitrum Sepolia ChainID: 421614
 
 */
 
